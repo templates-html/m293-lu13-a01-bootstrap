@@ -12,7 +12,7 @@
   "attr-value-double-quotes": false,
   "attr-value-single-quotes": true,
   "attr-value-not-empty": false,
-  "attr-sorted": true,
+  "attr-sorted": false,
   "attr-whitespace": true,
   "alt-require": true,
   "input-requires-label": true,

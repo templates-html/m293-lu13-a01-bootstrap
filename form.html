@@ -15,7 +15,7 @@
               <a class='nav-link' href='./'>Home</a>
             </li>
             <li class='nav-item'>
-              <a class='nav-link ' href='./marks.html'>Tabelle</a>
+              <a class='nav-link' href='./marks.html'>Tabelle</a>
             </li>
             <li class='nav-item'>
               <a class='nav-link active' href='#'>Formular</a>
@@ -25,6 +25,75 @@
       </nav>
     </header>
     <main class='col-12'>
+      <div id='examedit' class='container-xxl'>
+        <form id='editform' class='row'>
+          <div class='col-xxl-4 col-lg-6 col-md-12 row py-10'>
+            <fieldset class='border-primary border'>
+              <legend>Lernender</legend>
+              <label for='student-fullname' class='form-label'>Name</label>
+              <input type='text' required class='form-control' id='student-fullname'/>
+              <label class='form-label' for='student-email'>Email</label>
+              <input class='form-control' id='student-email' type='email' required/>
+              <label class='form-label' for='cohort'>Klasse</label>
+              <select id='cohort' required class='form-select'>
+                <option value='' disabled selected hidden>Bitte auswählen ...</option>
+                <option value='ia22a'>IA22a</option>
+                <option value='ia22b'>IA22b</option>
+                <option value='im22a'>IM22a</option>
+                <option value='im22b'>IM22b</option>
+              </select>
+            </fieldset>
+            <fieldset class='border-primary border'>
+              <legend>Lehrperson</legend>
+              <label class='form-label' for='teacher-fullname'>Name</label>
+              <input type='text' required class='form-control' id='teacher-fullname'/>
+              <label class='form-label' for='teacher'>Email</label>
+              <input class='form-control' id='teacher' type='email' required>
+            </fieldset>
+          </div>
+          <div class='col-xxl-4 col-lg-6 col-md-12'>
+            <fieldset class='border-primary border'>
+              <legend>Programmiersprachen</legend>
+              <div class='form-check'>
+                <input class='form-check-input' id='python' type='checkbox'>
+                <label for='python' class='form-label'>Python</label>
+              </div>
+              <div class='form-check'>
+                <input class='form-check-input' id='java' type='checkbox'>
+                <label for='java' class='form-label'>Java</label>
+              </div>
+              <div class='form-check'>
+                <input class='form-check-input' id='cpp' type='checkbox'>
+                <label for='cpp' class='form-label'>C++</label>
+              </div>
+              <label for='others' class='form-label'>Sonstige</label>
+              <textarea class='form-control' id='others' cols='30' rows='4' wrap='hard'
+                        maxlength='120'>&nbsp;</textarea>
+            </fieldset>
+
+            <fieldset class='border-primary border'>
+              <legend>Ausbildung</legend>
+              <div class='form-check'>
+                <input class='form-check-input' id='apprentice' name='education' type='radio'>
+                <label for='apprentice' class='form-label'>Berufslehre</label>
+              </div>
+              <div class='form-check'>
+                <input class='form-check-input' id='student' name='education' type='radio'>
+                <label for='student' class='form-label'>Mittelschule</label>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <div class='row mt-4'>
+            <div class='col-12'>
+              <button class='btn btn-primary' type='submit' id='saveexam' name='safeexam'>Speichern</button>
+              <button class='btn btn-light' id='cancel' name='cancel' type='reset'>Abbruch</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
     </main>
 
   </body>
