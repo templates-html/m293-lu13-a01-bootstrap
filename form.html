@@ -2,12 +2,99 @@
 <html lang='de'>
   <head>
     <meta charset='UTF-8'>
-    <title>Title</title>
+    <title>Bootstrap - Grid</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'
+          integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
   </head>
-  <body>
-    <h1>Flexible Spalten</h1>
-    <article class='col-xl-4 col-md-6 col-sm-12'>
-      <h1></h1>
-    </article>
+  <body class='container-xl'>
+    <header>
+      <nav class=''>
+        <div class=''>
+          <ul class=''>
+            <li class=''>
+              <a class='' href='./'>Home</a>
+            </li>
+            <li class=''>
+              <a class='' href='./marks.html'>Tabelle</a>
+            </li>
+            <li class=''>
+              <a class='' href='#'>Formular</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class=''>
+      <div id='examedit' class=''>
+        <form id='editform' class=''>
+          <div class=''>
+            <fieldset class=''>
+              <legend>Lernender</legend>
+              <label for='student-fullname' class=''>Name</label>
+              <input type='text' required class='' id='student-fullname'/>
+              <label class='' for='student-email'>Email</label>
+              <input class='' id='student-email' type='email' required/>
+              <label class='' for='cohort'>Klasse</label>
+              <select id='cohort' required class='form-select'>
+                <option value='' disabled selected hidden>Bitte auswählen ...</option>
+                <option value='ia22a'>IA22a</option>
+                <option value='ia22b'>IA22b</option>
+                <option value='im22a'>IM22a</option>
+                <option value='im22b'>IM22b</option>
+              </select>
+            </fieldset>
+            <fieldset class=''>
+              <legend>Lehrperson</legend>
+              <label class='' for='teacher-fullname'>Name</label>
+              <input class='' type='text' required id='teacher-fullname'/>
+              <label class='' for='teacher'>Email</label>
+              <input class='' id='teacher' type='email' required>
+            </fieldset>
+          </div>
+          <div class=''>
+            <fieldset class=''>
+              <legend>Programmiersprachen</legend>
+              <div class=''>
+                <input class='' id='python' type='checkbox'>
+                <label for='python' class=''>Python</label>
+              </div>
+              <div class=''>
+                <input class='' id='java' type='checkbox'>
+                <label for='java' class=''>Java</label>
+              </div>
+              <div class=''>
+                <input class='' id='cpp' type='checkbox'>
+                <label for='cpp' class=''>C++</label>
+              </div>
+              <label for='others' class=''>Sonstige</label>
+              <textarea class='' id='others' cols='30' rows='4' wrap='hard'
+                        maxlength='120'>&nbsp;</textarea>
+            </fieldset>
+
+            <fieldset class=''>
+              <legend>Ausbildung</legend>
+              <div class=''>
+                <input class='' id='apprentice' name='education' type='radio'>
+                <label for='apprentice' class=''>Berufslehre</label>
+              </div>
+              <div class=''>
+                <input class='' id='student' name='education' type='radio'>
+                <label for='student' class=''>Mittelschule</label>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <div class=''>
+            <div class=''>
+              <button class='' type='submit' id='saveexam' name='safeexam'>Speichern</button>
+              <button class='' id='cancel' name='cancel' type='reset'>Abbruch</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
   </body>
 </html>
