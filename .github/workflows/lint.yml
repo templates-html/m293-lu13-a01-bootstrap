@@ -1,4 +1,4 @@
-name: Run linter
+name: Report to Moodle Workflow incl Linter
 
 on:
   push:
@@ -12,19 +12,9 @@ permissions:
   contents: read
 
 jobs:
-  run-lint:
+  grading:
     if: ${{ !contains(github.actor, 'classroom') }}
-    name: Lint the Code which is committed
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
-      - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v5
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: "main"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: BZZ-Commons/workflows/.github/workflows/linter.yml@main
+    with:
+      MOODLE: true  # CHANGE true=export grade to moodle
+    secrets: inherit
